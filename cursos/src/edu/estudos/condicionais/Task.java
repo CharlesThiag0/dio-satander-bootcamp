@@ -17,15 +17,15 @@ public class Task {
 		this.description = description;
 	}
 
-	public List<Task> getTaskList() {
+	protected List<Task> getTaskList() {
 		return Collections.unmodifiableList(this.taskList);
 	}
 
-	public void add(Task task) {
+	protected void add(Task task) {
 		taskList.add(task);
 	}
 
-	public Task search(String name) throws Exception{
+	protected Task search(String name) throws Exception{
 		if (taskList.isEmpty()) {
 			throw new IllegalArgumentException("Lista está vazia");
 		}
@@ -39,11 +39,11 @@ public class Task {
 		return null;
 	}
 
-	public void conclude(String name) throws Exception {
+	protected void conclude(String name) throws Exception {
 		search(name).concluded = true;;
 	}
 
-	public void delete(String name) throws Exception {
+	protected void delete(String name) throws Exception {
 		Task task = search(name);
 		
 		if(task == null) {
@@ -53,7 +53,7 @@ public class Task {
 		taskList.remove(task);
 	}
 
-	public void allTask(){
+	protected void allTask(){
 		taskList.forEach(x -> System.out.println(x.name + " status: " + x.concluded));
 	}
 
