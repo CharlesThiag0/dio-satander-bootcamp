@@ -31,6 +31,14 @@ public class Operadores {
 			System.out.println("valor igual ou menor que zero não podera ser dividir");
 		}
 		
+		
+		int nota = 4;
+		
+		String resultado = nota >= 7 ? "Aprovado" : nota >= 5 ? "Recuperação" : "Reprovado";
+		
+		System.out.println(resultado);
+		
+		
 	}
 	
 	public static double dividir(int a, int b) throws Exception {
