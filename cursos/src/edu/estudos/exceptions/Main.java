@@ -1,17 +1,11 @@
 package edu.estudos.exceptions;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in).useLocale(Locale.US);
-		
+//		Scanner sc = new Scanner(System.in).useLocale(Locale.US);
 		// dividir
 //		Double numerador = sc.nextDouble();
 //		Double denominador = sc.nextDouble();
@@ -35,7 +29,7 @@ public class Main {
 //		} finally {
 //			sc.close();
 //		}
-		
+
 		// leia o conteúdo de um arquivo de texto
 //		String fileName = "text.txt";
 //		try {
@@ -56,16 +50,52 @@ public class Main {
 //		} catch (IOException e) {
 //			System.out.println("Erro de leitura do arquivo " + e.getMessage());
 //		}
-		
-		
-		for(int i = 0; i <= 10; i++) {
-			System.out.println(i);
+
+//		
+//		for(int i = 0; i <= 10; i++) {
+//			System.out.println(i);
+//		}
+//		
+//		int num1 = sc.nextInt();
+//		int num2 = sc.nextInt();
+//		
+//		try {
+//			System.out.println(contar(num1, num2));
+//		} catch (ParametroInvalidoException e) {
+//			System.out.println(e.getMessage());
+//		}
+
+		Scanner scanner = new Scanner(System.in);
+
+		double limiteDiario = scanner.nextDouble();
+
+		for (int i = 1; ; i++) {
+
+			double valorSaque = scanner.nextDouble();
+
+			if (valorSaque == 0) {
+				System.out.println("Transacoes encerradas.");
+				break;
+			} else if (valorSaque > limiteDiario) {
+				System.out.println("Limite diario de saque atingido. Transacoes encerradas.");
+				break;
+			} else {
+				limiteDiario -= valorSaque;
+				System.out.println(String.format("Saque realizado. Limite restante: %.1f", limiteDiario));
+			}
 		}
-		
+
+		scanner.close();
+
 	}
-	
-	
-	
+
+	public static Integer contar(int num1, int num2) throws ParametroInvalidoException {
+		if (num1 > num2) {
+			throw new ParametroInvalidoException("Erro : PARAMETROS INVALIDOS");
+		}
+
+		return num1 - num2;
+	}
 
 	public static Integer conversorText(String numText) {
 		for (char character : numText.toCharArray()) {
