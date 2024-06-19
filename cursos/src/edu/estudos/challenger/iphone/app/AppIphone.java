@@ -18,7 +18,7 @@ public class AppIphone {
 		System.out.println("Telefone:");
 		iphone.atender();
 		iphone.ligar();
-		iphone.iniciarCommioVoz();
+		iphone.iniciarCorreioVoz();
 		
 		System.out.println("---------------------");
 		

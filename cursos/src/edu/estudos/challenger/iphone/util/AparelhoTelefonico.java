@@ -9,7 +9,7 @@ public interface AparelhoTelefonico {
 		System.out.println("Atendendo");
 	}
 
-	default void iniciarCommioVoz() {
-		System.out.println("Iniciando Commio de voz");
+	default void iniciarCorreioVoz() {
+		System.out.println("Iniciando Correio de voz");
 	}
 }
