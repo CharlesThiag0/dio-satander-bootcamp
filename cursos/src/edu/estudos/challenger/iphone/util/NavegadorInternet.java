@@ -6,8 +6,8 @@ public interface NavegadorInternet {
 		System.out.println("Adicionando nova aba");
 	}
 	 
-	 default void exibirPagina() {
-		 System.out.println("Exibindo pagina");
+	 default void exibirPagina(String url) {
+		 System.out.println("Exibindo pagina: " + url);
 	 }
 	 
 	 default void atualizarPagina() {

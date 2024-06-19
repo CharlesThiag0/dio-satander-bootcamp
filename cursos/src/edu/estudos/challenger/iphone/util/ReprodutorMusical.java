@@ -1,8 +1,8 @@
 package edu.estudos.challenger.iphone.util;
 
 public interface ReprodutorMusical {
-	default void selecionarMusica() {
-		System.out.println("Selecionando musica");
+	default void selecionarMusica(String musica) {
+		System.out.println("Selecionando musica: " + musica);
 	}
 	
 	default void pausar() {

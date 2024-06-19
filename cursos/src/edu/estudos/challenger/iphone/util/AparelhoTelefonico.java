@@ -1,8 +1,8 @@
 package edu.estudos.challenger.iphone.util;
 
 public interface AparelhoTelefonico {
-	default void ligar() {
-		System.out.println("Ligando");
+	default void ligar(String numero) {
+		System.out.println("Ligando para: " + numero);
 	}
 	
 	default void atender() {
