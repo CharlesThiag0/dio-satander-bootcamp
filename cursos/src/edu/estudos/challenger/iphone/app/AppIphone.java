@@ -11,19 +11,19 @@ public class AppIphone {
 		System.out.println("Navegador:");
 		iphone.adicionarNovaAba();
 		iphone.atualizarPagina();
-		iphone.exibirPagina();
+		iphone.exibirPagina(null);
 		
 		System.out.println("---------------------");
 		
 		System.out.println("Telefone:");
 		iphone.atender();
-		iphone.ligar();
+		iphone.ligar(null);
 		iphone.iniciarCorreioVoz();
 		
 		System.out.println("---------------------");
 		
 		System.out.println("Musica:");
-		iphone.selecionarMusica();
+		iphone.selecionarMusica(null);
 		iphone.tocar();
 		iphone.pausar();
 	}
