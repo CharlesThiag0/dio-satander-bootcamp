@@ -1,35 +1,33 @@
-package edu.estudos.collections.tarefas;
+package edu.estudos.collections.contatos;
 
 import java.util.Objects;
 
-public class Tarefa {
+public class Contato {
 	private String nome;
-	private boolean concluida = false;
-
-	public Tarefa(String nome) {
+	private Integer numero;
+	
+	public Contato(String nome, Integer numero) {
 		this.nome = nome;
+		this.numero = numero;
 	}
 
 	public String getNome() {
 		return nome;
 	}
 	
-	public boolean isConcluida() {
-		return concluida;
+	public Integer getNumero() {
+		return numero;
 	}
+	
 
-	public void concluir() {
-		this.concluida = true;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNumero(Integer numero) {
+		this.numero = numero;
 	}
 	
 
 	@Override
 	public String toString() {
-		return "Tarefa [nome = " + nome + "]";
+		return "Contato [nome=" + nome + ", numero=" + numero + "]";
 	}
 
 	@Override
@@ -45,7 +43,7 @@ public class Tarefa {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Tarefa other = (Tarefa) obj;
+		Contato other = (Contato) obj;
 		return Objects.equals(nome, other.nome);
 	}
 }
