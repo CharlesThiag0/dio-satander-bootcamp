@@ -54,6 +54,11 @@ public class Livro implements Comparable<Livro>{
 		Livro other = (Livro) obj;
 		return Objects.equals(titulo, other.titulo);
 	}
+
+	// para teste
+	public double getQuant() {
+		return 2;
+	}
 }
 
 class ComparatorPorAutor implements Comparator<Map.Entry<String, Livro>> {

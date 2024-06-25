@@ -35,7 +35,7 @@ public class CarrinhoCompras {
 	}
 
 	public void exibirItens() {
-		System.out.println(this.itens);
+		itens.forEach(x -> System.out.println(x + " "));
 	}
 
 }
